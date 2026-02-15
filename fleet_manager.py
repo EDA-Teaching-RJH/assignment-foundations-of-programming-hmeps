@@ -9,6 +9,7 @@ def main():
     add_member()
     remove_member()
     update_rank()
+    display_roster()
 
 def init_database():
     for b in range(len(n)):
@@ -67,6 +68,13 @@ def update_rank():
         else:
             print("ID value not found in database, Re-enter the ID!")
             find_member = str(input("Enter an ID value for the member you wish to update: "))
+
+def display_roster():
+    for l in range(len(n)):
+        print(f"Name: {n[l]}| Rank: {r[l]}| Division: {d[l]}| ID's: {i[l]}.")
+        
+
+
 
         
 
