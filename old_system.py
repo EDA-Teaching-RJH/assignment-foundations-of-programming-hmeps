@@ -14,7 +14,7 @@ def run_system_monolith():
     while loading < 5:
         print("Loading module " + str(loading))
         loading += 1
-        
+    
     
     while True:
         print("\n--- MENU ---")
@@ -26,10 +26,10 @@ def run_system_monolith():
         
         opt = input("Select option: ")
         
-        if opt == "0":  
+        if opt == "1":  
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
@@ -57,7 +57,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or "Commander": 
                     count = count + 1
-            print("High ranking officers: " + count) 
+                print(f"High ranking officers: {count}") 
             
         elif opt == "5":
             print("Shutting down.")
@@ -80,7 +80,7 @@ def run_system_monolith():
             print("Database empty.")
 
         
-        fuel = 100
+        fuel = int(input("Whats the fuel readings: "))
         consumption = 0
         while fuel > 0:
             
