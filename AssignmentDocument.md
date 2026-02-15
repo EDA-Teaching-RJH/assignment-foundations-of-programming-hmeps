@@ -150,13 +150,9 @@ Full Implementation = **4 Marks**
        to run, for example ```add_member()``` takes names, ranks, divs
        and ids.        
 
- 
-
-
 ```
 🔴🔴🔴 YOU MUST COMMIT EVERYTIME YOU ADD A FEATURE  🔴🔴🔴
 ```
-
 1.  `init_database()`: Returns 4 lists pre-populated with at least 5 Star Trek characters and their data.
     
 2.  `display_menu()`: Queries users full name, Prints the options and current student logged in and returns the user's choice.
