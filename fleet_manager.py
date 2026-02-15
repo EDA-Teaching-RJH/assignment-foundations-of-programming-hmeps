@@ -8,6 +8,7 @@ def main():
     display_menu()
     add_member()
     remove_member()
+    update_rank()
 
 def init_database():
     for b in range(len(n)):
@@ -42,18 +43,32 @@ def remove_member():
     find_id = str(input("Enter the value of the ID you want to remove: "))
     while True:
         if find_id in i:
-            idx = i.index(find_id)
+            idx1 = i.index(find_id)
 
-            n.pop(idx)
-            r.pop(idx)
-            d.pop(idx)
-            i.pop(idx)
+            n.pop(idx1)
+            r.pop(idx1)
+            d.pop(idx1)
+            i.pop(idx1)
 
             print("Member successfully removed!")
             break
         else:
             print("ID not found in database, Try Again!")
             find_id = str(input("Enter the name of the ID you want to remove: "))
+
+def update_rank():
+    find_member = str(input("Enter an ID value for the member you wish to update: "))
+    while True:
+        if find_member in i:
+            idx2 = i.index(find_member)
+            new_rank = str(input("Enter the new rank: "))
+            r[idx2] = new_rank
+            break
+        else:
+            print("ID value not found in database, Re-enter the ID!")
+            find_member = str(input("Enter an ID value for the member you wish to update: "))
+
+        
 
 
 
