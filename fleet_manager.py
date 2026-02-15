@@ -7,7 +7,7 @@ def main():
     init_database()
     display_menu()
     add_member()
-   
+    remove_member()
 
 def init_database():
     for b in range(len(n)):
@@ -38,6 +38,22 @@ def add_member():
     d.append(add_division)
     i.append(add_id)
 
+def remove_member():
+    find_id = str(input("Enter the value of the ID you want to remove: "))
+    while True:
+        if find_id in i:
+            idx = i.index(find_id)
+
+            n.pop(idx)
+            r.pop(idx)
+            d.pop(idx)
+            i.pop(idx)
+
+            print("Member successfully removed!")
+            break
+        else:
+            print("ID not found in database, Try Again!")
+            find_id = str(input("Enter the name of the ID you want to remove: "))
 
 
 
