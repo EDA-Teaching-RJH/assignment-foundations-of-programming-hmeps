@@ -65,6 +65,7 @@ def run_system_monolith():
             
         else:
             print("Invalid.")
+            break
         
         x = 10
         if x > 5:
